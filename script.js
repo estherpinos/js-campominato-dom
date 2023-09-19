@@ -19,26 +19,21 @@ document.getElementById('play').addEventListener('click', function(){
    case 1:
      reset();
      creaDiv(100, "box1");
-
-     while(listaBomba.length < numeriBombe){
-      let bombeRandom = Math.ceil(Math.random() * 100 + 1);
-      let valori = bombeRandom;
-      listaBomba.push(valori);
-      console.log(listaBomba);
-       
-     }
-     
+    //  creaBombe();
+     console.log(creaBombe());
      break;
      
 
    
    case 2:
      reset();
+     creaBombe();
      creaDiv(81, "box2");
      break;  
 
    case 3:
      reset();
+     creaBombe();
      creaDiv(64, "box3");
      break;
   
@@ -64,7 +59,7 @@ document.getElementById('play').addEventListener('click', function(){
    }
   }
 
-  creaBombe();
+  
 
   function creaBombe(){
     const listaBombe=[];
@@ -82,7 +77,7 @@ document.getElementById('play').addEventListener('click', function(){
         listaBombe.push(numero);
     } 
 
-    console.log(listaBombe);
+    return listaBombe;
     
   }
 
