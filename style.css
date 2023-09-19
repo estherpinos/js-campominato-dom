@@ -77,3 +77,8 @@
 .clicked span{
   display: flex;
 }
+
+/* BOMBE */
+.red{
+  background-color: red;
+}
