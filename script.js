@@ -87,20 +87,16 @@ function reset(){
 
  function creaBombe(){
    const listaBombe=[];  // array dove verranno messi i numeri delle bombe
-   for(let i=0; i<16; i++){
-     let numero = Math.ceil(Math.random() * 100 + 1);
-     let controlloNumeriDoppi = false;
-     for(let conta=0; conta<listaBombe.length; conta++){
-       if(listaBombe[conta]==numero)
-       {
-         controlloNumeriDoppi= true;
-         i--;
-       }
-     }
-     if(controlloNumeriDoppi==false)
-       listaBombe.push(numero);
-   } 
+   let numeroBombs=16;
+
+   while(listaBombe.length<numeroBombs){
+    bomb=Math.ceil(Math.random() * 100 + 1);
+    // Pusho la bomba se non è dentro al array
+    if(!listaBombe.includes(bomb)) listaBombe.push(bomb);
+
+   }
 
    return listaBombe;
+
    
  }
